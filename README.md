@@ -1,57 +1,69 @@
-# React + TypeScript + Vite
+# Map-leafletjs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application using TypeScript and Vite, integrated with Leaflet for interactive maps. It provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Map-leafletjs is a web application that allows users to view and interact with maps. It leverages the power of Leaflet for map rendering and provides a responsive and user-friendly interface built with React and TypeScript.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Interactive maps with Leaflet
+- Fast development with Vite
+- Type-safe code with TypeScript
+- Linting with ESLint and TypeScript ESLint
+- Hot Module Replacement (HMR) for a smooth development experience
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Setup Overview
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- pnpm (version 6 or higher)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/joy095/Map-leafletjs.git
+   cd Map-leafletjs
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   pnpm install
+   ```
+
+### Development
+
+To start the development server with HMR:
+
+```sh
+pnpm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To build the project for production:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+pnpm run build
 ```
-# Map-leafletjs
-# Map-leafletjs
-# Map-leafletjs
+
+### Preview
+
+To preview the production build:
+
+```sh
+pnpm run preview
+```
+
+### Linting
+
+To lint the codebase:
+
+```sh
+pnpm run lint
+```
