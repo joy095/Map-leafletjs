@@ -15,7 +15,6 @@ const KmlMapViewer = () => {
   const [kmlData, setKmlData] = useState<Document | null>(null);
   const [summary, setSummary] = useState<Record<string, number>>({});
   const [details, setDetails] = useState<Array<{ name: string; type: string; length: string }>>([]);
-  const [activeTab, setActiveTab] = useState("map");
   const mapRef = useRef<HTMLDivElement | null>(null);
   const mapInstance = useRef<L.Map | null>(null);
   const layerGroup = useRef<L.LayerGroup | null>(null);
@@ -388,18 +387,16 @@ const KmlMapViewer = () => {
           <div className="mb-4">
             <Tabs defaultValue="map">
               <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="map" onClick={() => setActiveTab("map")}>
+                <TabsTrigger value="map">
                   Map
                 </TabsTrigger>
                 <TabsTrigger
                   value="summary"
-                  onClick={() => setActiveTab("summary")}
                 >
                   Summary
                 </TabsTrigger>
                 <TabsTrigger
                   value="details"
-                  onClick={() => setActiveTab("details")}
                 >
                   Details
                 </TabsTrigger>
